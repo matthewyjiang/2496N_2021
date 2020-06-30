@@ -47,7 +47,7 @@ void competition_initialize() {}
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-void autonomous() {}
+#include "autonomous.cpp"
 
 /**
  * Runs the operator control code. This function will be started in its own task
@@ -62,10 +62,5 @@ void autonomous() {}
  * operator control task will be stopped. Re-enabling the robot will restart the
  * task, not resume it from where it left off.
  */
-void opcontrol() {
 
-	while (true) {
-		
-		pros::delay(20);
-	}
-}
+#include "opcontrol.cpp"
