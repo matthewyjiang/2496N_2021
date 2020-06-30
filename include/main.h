@@ -34,6 +34,12 @@
  */
 #define PROS_USE_LITERALS
 
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <string>
+#include <algorithm>
+
 #include "api.h"
 
 /**
