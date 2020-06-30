@@ -34,19 +34,16 @@
  */
 #define PROS_USE_LITERALS
 
-#include <iostream>
-#include <cstdlib>
-#include <cmath>
-#include <string>
-#include <algorithm>
-
 #include "api.h"
 
 /**
  * You should add more #includes here
  */
-//#include "okapi/api.hpp"
+#include "okapi/api.hpp"
 //#include "pros/api_legacy.h"
+
+//custom includes
+#include "lib.h"
 
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do
