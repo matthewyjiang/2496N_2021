@@ -1,5 +1,9 @@
 #include "autonomous.h"
 
-void autonomous() {
+void cwAuton(){
+
+}
+
+void ccwAuton(){
 
 }
