@@ -43,6 +43,7 @@
 //#include "pros/api_legacy.h"
 
 //custom includes
+#include "config.h"
 #include "lib.h"
 #include "pidcontrol.h"
 
