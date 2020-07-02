@@ -1,4 +1,5 @@
 #include "main.h"
+#include "opcontrol.h"
 
 void tankControl(int maxOutput)
 {
