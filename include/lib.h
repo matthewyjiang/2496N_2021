@@ -1,6 +1,8 @@
 #pragma once
 #include "main.h"
 
-void chassisPWM(int voltageLeft, int voltageRight);
+extern void chassisPWM(int voltageLeft, int voltageRight);
 
-void chassisPWM(int voltage);
+extern void chassisPWM(int voltage);
+
+extern void tankControl();

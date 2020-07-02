@@ -52,5 +52,3 @@ void competition_initialize() {}
 void autonomous() {
 
 }
-
-#include "opcontrol.h"
