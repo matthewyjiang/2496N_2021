@@ -7,6 +7,15 @@
  * to keep execution time for this mode under a few seconds.
  */
 
+enum chassisPIDState {On = 1, Off = 0};
+
+void drive_PID() {
+	chassisStraight.slewOverrideEnable = true;
+	while (true) {
+
+	}
+}
+
 void initialize() {
-	
+	pros::Task drivePID();
 }

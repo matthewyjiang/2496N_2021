@@ -23,7 +23,7 @@ void PidControl::pidInit(PidControl pid){
 }
 
 void PidControl::resetConstants(){
-    kP = f_kP; 
+    kP = f_kP;
     kI = f_kI;
     kD = f_kD;
 }
@@ -88,3 +88,7 @@ void PidControl::reset_variables(){
 void PidControl::reset_integral(){
     integral = 0;
 }
+
+PidControl chassisStraight = new PidControl(100, 0, 0, 1000);
+
+PidControl chassisTurn = new PidControl(100, 0, 0, 1000);
