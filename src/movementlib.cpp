@@ -8,7 +8,7 @@ void stopDrive() {
 
 void drive(int distance, double maxVoltage){
   chassisState = NORMAL;
-  ChassisStraight.target = distance;
+  ChassisStraight.setTarget(distance);
   ChassisStraight.setMaxVoltage(maxVoltage);
 }
 
@@ -16,5 +16,5 @@ void pivot(int degree, double maxVoltage){
   chassisState = PIVOT;
   ChassisTurn.setMaxVoltage(maxVoltage);
   double radian = (degree*acos(-1,0))/180;
-  ChassisTurn.target = chassisTurn.currentPosition - radian;
+  ChassisTurn.setTarget(chassisTurn.currentPosition - radian);
 }

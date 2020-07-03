@@ -49,6 +49,10 @@ class PidControl{
 
     double getOutput();
 
+    void setMaxVoltage(double input);
+
+    void setTarget(int distance);
+
     void setInput(double input);
 
     void reset_integral();
@@ -56,6 +60,3 @@ class PidControl{
 
 extern PidControl chassisStraight;
 extern PidControl chassisTurn;
-
-
-

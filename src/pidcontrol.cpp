@@ -85,6 +85,10 @@ void PidControl::setMaxVoltage(double input){
   this->max_mV = input;
 }
 
+void PidControl::setTarget(int distance) {
+  this->target = distance;
+}
+
 void PidControl::reset_variables(){
     currentPosition = 0;
     error           = 0;
