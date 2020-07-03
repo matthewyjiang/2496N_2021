@@ -49,6 +49,9 @@ void competition_initialize() {}
  */
 #include "autonomous.h"
 
+double gyroOffset = 0;
+
 void autonomous() {
+	gyroOffset = imu.get_rotation();
 
 }

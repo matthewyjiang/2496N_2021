@@ -47,11 +47,18 @@ class PidControl{
 
     void reset_variables();
 
+    double getOutput();
+
+    void setMaxVoltage(double input);
+
+    void setTarget(int distance);
+
+    void setInput(double input);
+
+    double getError();
+
     void reset_integral();
 };
 
 extern PidControl chassisStraight;
 extern PidControl chassisTurn;
-
-
-

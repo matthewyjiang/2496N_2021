@@ -23,7 +23,7 @@ void PidControl::pidInit(PidControl pid){
 }
 
 void PidControl::resetConstants(){
-    kP = f_kP; 
+    kP = f_kP;
     kI = f_kI;
     kD = f_kD;
 }
@@ -73,6 +73,26 @@ void PidControl::moveTo(){
     }
 }
 
+double PidControl::getOutput(){
+    return this->output;
+}
+
+void PidControl::setInput(double input){
+    this->currentPosition = input;
+}
+
+void PidControl::setMaxVoltage(double input){
+    this->max_mV = input;
+}
+
+void PidControl::setTarget(int distance) {
+    this->target = distance;
+}
+
+double PidControl::getError(){
+    return this->error;
+}
+
 void PidControl::reset_variables(){
     currentPosition = 0;
     error           = 0;
@@ -88,3 +108,7 @@ void PidControl::reset_variables(){
 void PidControl::reset_integral(){
     integral = 0;
 }
+
+PidControl chassisStraight = new PidControl(100, 0, 0, 1000);
+
+PidControl chassisTurn = new PidControl(100, 0, 0, 1000);

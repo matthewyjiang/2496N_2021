@@ -11,3 +11,5 @@ extern pros::Motor right_roller_mtr;
 
 extern pros::ADIEncoder left_encoder;
 extern pros::ADIEncoder right_encoder;
+
+extern pros::Imu imu;
