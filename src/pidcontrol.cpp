@@ -73,6 +73,14 @@ void PidControl::moveTo(){
     }
 }
 
+double PidControl::getOutput(){
+    return output;
+}
+
+void PidControl::setInput(double input){
+    this->currentPosition = input;
+}
+
 void PidControl::reset_variables(){
     currentPosition = 0;
     error           = 0;

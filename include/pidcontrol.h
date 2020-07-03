@@ -47,6 +47,10 @@ class PidControl{
 
     void reset_variables();
 
+    double getOutput();
+
+    void setInput(double input);
+
     void reset_integral();
 };
 

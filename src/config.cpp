@@ -11,3 +11,5 @@ pros::Motor right_roller_mtr(14, pros::E_MOTOR_GEARSET_18, true);
 
 pros::ADIEncoder left_encoder(1,2);
 pros::ADIEncoder right_encoder(3,4);
+
+pros::Imu imu(20);
