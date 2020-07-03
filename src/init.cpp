@@ -23,7 +23,7 @@ void drive_PID() {
 			chassisStraight.setInput(left_encoder.get_value());//placeholder until encoder gets in
 			chassisStraight.moveTo();
 
-			chassisPWM(chassisStraight.getOutput(), chassisStraight.getOutput());
+			chassisPWM((chassisStraight.getOutput() > chassisStraight.max_mV) ? chassisStraight.max_mV : chassisStraight.getOutput(), (chassisStraight.getOutput() > chassisStraight.max_mV) ? chassisStraight.max_mV : chassisStraight.getOutput());
 		} else if(chassisState == PIVOT){
 			chassisTurn.setInput(imu.get_rotation()-gyroOffset)
             chassisTurn.moveTo();

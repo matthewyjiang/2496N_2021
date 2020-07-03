@@ -81,6 +81,10 @@ void PidControl::setInput(double input){
     this->currentPosition = input;
 }
 
+void PidControl::setMaxVoltage(double input){
+  this->max_mV = input;
+}
+
 void PidControl::reset_variables(){
     currentPosition = 0;
     error           = 0;
