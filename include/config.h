@@ -6,3 +6,5 @@ extern pros::Motor front_left_mtr;
 extern pros::Motor back_left_mtr;
 extern pros::Motor front_right_mtr;
 extern pros::Motor back_right_mtr;
+extern pros::Motor left_roller_mtr;
+extern pros::Motor right_roller_mtr;

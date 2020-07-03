@@ -2,8 +2,8 @@
 
 void tankControl(int maxOutput)
 {
-    int leftY = master.get_analog(ANALOG_LEFT_Y);
-    int rightY = master.get_analog(ANALOG_RIGHT_Y);
+    int leftY = master.get_analog(pros::ANALOG_LEFT_Y);
+    int rightY = master.get_analog(pros::ANALOG_RIGHT_Y);
 
     leftY = std::clamp(leftY, -maxOutput, maxOutput);
     rightY = std::clamp(rightY, -maxOutput, maxOutput);
@@ -12,6 +12,21 @@ void tankControl(int maxOutput)
     back_left_mtr.move(leftY);
     front_right_mtr.move(rightY);
     back_right_mtr.move(rightY);
+}
+
+void intakeControl(int speed) {
+    if (master.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
+        left_roller_mtr.move(speed);
+        right_roller_mtr.move(speed);
+    }
+    else if(master.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
+        left_roller_mtr.move(-speed);
+        right_roller_mtr.move(-speed);
+    }
+    else {
+        left_roller_mtr.move(0);
+        right_roller_mtr.move(0);
+    }
 }
 
 /**
@@ -33,6 +48,7 @@ void opcontrol() {
 	while (true) {
 
 		tankControl(127);
+        intakeControl(127);
 		
 		pros::delay(20);
 	}
