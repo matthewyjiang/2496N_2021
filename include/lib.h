@@ -12,3 +12,5 @@ extern void chassisPWM(int voltage);
 extern void tankControl(int maxOutput);
 
 extern void intakeControl(int speed);
+
+extern void despositControl(int despositspeed, int indexerspeed);

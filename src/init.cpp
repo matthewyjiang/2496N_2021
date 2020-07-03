@@ -20,15 +20,16 @@ void drive_PID() {
 	chassisTurn.slewOverrideEnable = true;
 	while (true) {
 		if(chassisState == NORMAL){
-			chassisStraight.setInput(left_encoder.get_value());//placeholder until encoder gets in
+			chassisStraight.setInput(left_encoder.get_value());
 			chassisStraight.moveTo();
 
-			chassisPWM(chassisStraight.getOutput(), chassisStraight.getOutput());
-		} else if(chassisState == PIVOT){
+			chassisPWM(chassisStraight.getOutput());
+		}
+		else if(chassisState == PIVOT){
 			chassisTurn.setInput(imu.get_rotation()-gyroOffset)
-            chassisTurn.moveTo();
+      chassisTurn.moveTo();
 
-            chassisPWM(chassisTurn.getOutput(), -chassisTurn.getOutput());
+      chassisPWM(chassisTurn.getOutput(), -chassisTurn.getOutput());
 		}
 		pros::delay(20);
 	}

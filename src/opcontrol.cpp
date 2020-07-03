@@ -1,7 +1,6 @@
 #include "main.h"
 
-void tankControl(int maxOutput)
-{
+void tankControl(int maxOutput){
     int leftY = master.get_analog(pros::ANALOG_LEFT_Y);
     int rightY = master.get_analog(pros::ANALOG_RIGHT_Y);
 
@@ -14,7 +13,7 @@ void tankControl(int maxOutput)
     back_right_mtr.move(rightY);
 }
 
-void intakeControl(int speed) {
+void intakeControl(int speed){
     if (master.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
         left_roller_mtr.move(speed);
         right_roller_mtr.move(speed);
@@ -26,6 +25,21 @@ void intakeControl(int speed) {
     else {
         left_roller_mtr.move(0);
         right_roller_mtr.move(0);
+    }
+}
+
+void despositControl(int depositspeed, int indexspeed){
+    if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L1)){
+        depositor_mtr.move(speed);
+        indexer_mtr.move(speed)
+    }
+    else if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L2)){
+        depositor_mtr.move(-speed);
+        indexer_mtr.move(-speed)
+    }
+    else{
+        depositor_mtr.move(0);
+        indexer_mtr.move(0);
     }
 }
 
@@ -48,8 +62,10 @@ void opcontrol() {
 	while (true) {
 
 		tankControl(127);
-        intakeControl(127);
-		
+    intakeControl(127);
+    despositControl(127);
+
+
 		pros::delay(20);
 	}
 }
