@@ -8,3 +8,6 @@ pros::Motor front_right_mtr(7, pros::E_MOTOR_GEARSET_36, true);
 pros::Motor back_right_mtr(8, pros::E_MOTOR_GEARSET_36, true);
 pros::Motor left_roller_mtr(13, pros::E_MOTOR_GEARSET_18);
 pros::Motor right_roller_mtr(14, pros::E_MOTOR_GEARSET_18, true);
+
+pros::ADIEncoder left_encoder(1,2);
+pros::ADIEncoder right_encoder(3,4);
