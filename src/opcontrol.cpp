@@ -1,7 +1,6 @@
 #include "main.h"
 
-void tankControl(int maxOutput)
-{
+void tankControl(int maxOutput) {
     int leftY = master.get_analog(ANALOG_LEFT_Y);
     int rightY = master.get_analog(ANALOG_RIGHT_Y);
 
@@ -14,6 +13,12 @@ void tankControl(int maxOutput)
     back_right_mtr.move(rightY);
 }
 
+void intakeControl(int speed) {
+  if (master.get_digital(E_CONTROLLER_DIGITAL_R1) && !) {
+    left_roller_mtr.move(speed);
+    right_roller_mtr.move(speed);
+}
+}
 /**
  * Runs the operator control code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -33,7 +38,7 @@ void opcontrol() {
 	while (true) {
 
 		tankControl(127);
-		
+
 		pros::delay(20);
 	}
 }
