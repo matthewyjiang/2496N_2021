@@ -1,7 +1,13 @@
 #pragma once
 #include "main.h"
 
+extern void disableChassisPID();
+
 extern void drive(int distance, double maxVoltage);
+
+extern void drive(int distance, double maxVoltage, bool blocking, int threshold);
+
+extern void drive(int distance, double maxVoltage, int count);
 
 extern void pivot(int degree, double maxVoltage);
 

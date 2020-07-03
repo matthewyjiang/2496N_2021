@@ -55,6 +55,8 @@ class PidControl{
 
     void setInput(double input);
 
+    double getError();
+
     void reset_integral();
 };
 

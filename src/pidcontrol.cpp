@@ -74,7 +74,7 @@ void PidControl::moveTo(){
 }
 
 double PidControl::getOutput(){
-    return output;
+    return this->output;
 }
 
 void PidControl::setInput(double input){
@@ -82,11 +82,15 @@ void PidControl::setInput(double input){
 }
 
 void PidControl::setMaxVoltage(double input){
-  this->max_mV = input;
+    this->max_mV = input;
 }
 
 void PidControl::setTarget(int distance) {
-  this->target = distance;
+    this->target = distance;
+}
+
+double PidControl::getError(){
+    return this->error;
 }
 
 void PidControl::reset_variables(){

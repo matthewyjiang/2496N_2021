@@ -23,12 +23,12 @@ void drive_PID() {
 			chassisStraight.setInput(left_encoder.get_value());//placeholder until encoder gets in
 			chassisStraight.moveTo();
 
-			chassisPWM((chassisStraight.getOutput() > chassisStraight.max_mV) ? chassisStraight.max_mV : chassisStraight.getOutput(), (chassisStraight.getOutput() > chassisStraight.max_mV) ? chassisStraight.max_mV : chassisStraight.getOutput());
+			chassisPWM(chassisStraight.getOutput(), chassisStraight.getOutput());
 		} else if(chassisState == PIVOT){
 			chassisTurn.setInput(imu.get_rotation()-gyroOffset)
             chassisTurn.moveTo();
 
-            chassisPWM((chassisTurn.getOutput() > chassisTurn.max_mV) ? chassisTurn.max_mV : ChassisTurn.getOutput(), -(chassisTurn.getOutput() > chassisTurn.max_mV) ? chassisTurn.max_mV : ChassisTurn.getOutput());
+            chassisPWM(chassisTurn.getOutput(), -chassisTurn.getOutput());
 		}
 		pros::delay(20);
 	}
