@@ -11,4 +11,8 @@ extern void drive(int distance, double maxVoltage, int count);
 
 extern void pivot(int degree, double maxVoltage);
 
+extern void pivot(int degree, double maxVoltage, bool blocking, int threshold);
+
+extern void pivot(int degree, double maxVoltage, int timer);
+
 extern void stopDrive();
