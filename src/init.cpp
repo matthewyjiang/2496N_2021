@@ -28,7 +28,7 @@ void drive_PID() {
 			chassisTurn.setInput(imu.get_rotation()-gyroOffset)
             chassisTurn.moveTo();
 
-            chassisPWM(chassisTurn.getOutput(), -chassisTurn.getOutput());
+            chassisPWM((chassisTurn.getOutput() > chassisTurn.max_mV) ? chassisTurn.max_mV : ChassisTurn.getOutput(), -(chassisTurn.getOutput() > chassisTurn.max_mV) ? chassisTurn.max_mV : ChassisTurn.getOutput());
 		}
 		pros::delay(20);
 	}

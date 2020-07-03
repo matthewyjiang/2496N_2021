@@ -12,5 +12,7 @@ void drive(int distance, double maxVoltage){
 }
 
 void pivot(int degree, double maxVoltage){
+  ChassisTurn.setMaxVoltage(maxVoltage);
   double radian = (degree*acos(-1,0))/180;
+  ChassisTurn.target = chassisTurn.currentPosition - radian;
 }
