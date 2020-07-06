@@ -1,6 +1,6 @@
 #include "main.h"
 
-void resetEncoder(){
+void resetEncoders(){
   left_encoder.reset();
   right_encoder.reset();
 }
