@@ -23,7 +23,7 @@ void drive_PID() {
 			chassisStraight.setInput(left_encoder.get_value());
 			chassisStraight.moveTo();
 
-			chassisPWM(chassisStraight.getOutput());
+			chassisPWM(chassisStraight.getOutput(), chassisStraight.getOutput());
 		}
 		else if(chassisState == PIVOT){
 			chassisTurn.setInput(imu.get_rotation()-gyroOffset)
