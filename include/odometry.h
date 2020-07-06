@@ -1,6 +1,6 @@
 #pragma once
 #include "main.h"
 
-extern void resetEncoder();
+extern void resetEncoders();
 
 extern Point getPosition();
