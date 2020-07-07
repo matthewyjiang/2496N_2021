@@ -8,13 +8,21 @@ This repository houses a standard PROS Project, a VEX V5 coding library.
 
 # Style Guide: For Consistency
 
-Curly Braces start on the same line:
+Curly braces start on the same line:
 ```
 while(true){
   doSomething();
 }
+
+if(something){
+  doSomething();
+} else if(somethingElse){
+  doSomethingElse();
+} else {
+  youGetThePoint();
+}
 ```
-User Created Names use camelCase:
+User created names use camelCase:
 ```
 int thisIsHowYouWriteCamelCase = 0;
 ```
