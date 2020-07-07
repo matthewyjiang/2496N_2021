@@ -23,11 +23,11 @@ if(something){
 }
 ```
 User created names use camelCase:
-```
+```cpp
 int thisIsHowYouWriteCamelCase = 0;
 ```
 Spaces between operators:
-```
+```cpp
 if(x == y){
   a + b = c;
 }
