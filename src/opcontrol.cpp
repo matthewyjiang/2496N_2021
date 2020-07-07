@@ -31,11 +31,11 @@ void intakeControl(int speed){
 void despositControl(int depositspeed, int indexspeed){
     if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L1)){
         depositor_mtr.move(depositspeed);
-        indexer_mtr.move(indexspeed)
+        indexer_mtr.move(indexspeed);
     }
     else if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L2)){
         depositor_mtr.move(-depositspeed);
-        indexer_mtr.move(-indexspeed)
+        indexer_mtr.move(-indexspeed);
     }
     else{
         depositor_mtr.move(0);
