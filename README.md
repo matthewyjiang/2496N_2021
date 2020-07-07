@@ -10,7 +10,7 @@ This repository houses a standard PROS Project, a VEX V5 coding library.
 
 Programming is pretty cool. This project uses PROS, a VEX V5 coding library based on C++ and C. It's recommended that you teach yourself some basic C++ concepts before attempting to modify this code. 
 
-If you need help, ask Matt, but check [the PROS V5 API](https://pros.cs.purdue.edu/v5/api/index.html) first.
+If you need help, ~~figure it our yourself~~ ask Matt, but check [the PROS V5 API](https://pros.cs.purdue.edu/v5/api/index.html) first.
 
 ## Style Guide: For Consistency
 
