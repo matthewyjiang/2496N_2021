@@ -17,15 +17,15 @@ If you need help, ask Matt, but check [the PROS V5 API](https://pros.cs.purdue.e
 Curly braces start on the same line:
 ```cpp
 while(true){
-  doSomething();
+    doSomething();
 }
 
 if(something){
-  doSomething();
+    doSomething();
 } else if(somethingElse){
-  doSomethingElse();
+    doSomethingElse();
 } else {
-  youGetThePoint();
+    youGetThePoint();
 }
 ```
 User created names use camelCase:
@@ -35,7 +35,7 @@ int thisIsHowYouWriteCamelCase = 0;
 Spaces between operators:
 ```cpp
 if(x == y){
-  a + b = c;
+    a + b = c;
 }
 
 i = j ? k : l;
