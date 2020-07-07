@@ -9,7 +9,7 @@ This repository houses a standard PROS Project, a VEX V5 coding library.
 # Style Guide: For Consistency
 
 Curly braces start on the same line:
-```
+```cpp
 while(true){
   doSomething();
 }
