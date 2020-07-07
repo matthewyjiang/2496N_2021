@@ -6,13 +6,13 @@ This repository houses a standard PROS Project, a VEX V5 coding library.
 
 2496N Members: Please send me your GitHub Account so that I can add you to this repository as a contributor.
 
-# Learn to Program!
+## Learn to Program!
 
 Programming is pretty cool. This project uses PROS, a VEX V5 coding library based on C++ and C. It's recommended that you teach yourself some basic C++ concepts before attempting to modify this code. 
 
 If you need help, ask Matt, but check [the PROS V5 API](https://pros.cs.purdue.edu/v5/api/index.html) first.
 
-# Style Guide: For Consistency
+## Style Guide: For Consistency
 
 Curly braces start on the same line:
 ```cpp
