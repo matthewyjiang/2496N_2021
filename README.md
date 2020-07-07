@@ -5,3 +5,27 @@ This is the Repository for 2496N's code. This repository will be updated as we m
 This repository houses a standard PROS Project, a VEX V5 coding library.
 
 2496N Members: Please send me your GitHub Account so that I can add you to this repository as a contributor.
+
+# Style Guide: For Consistency
+
+Curly Braces start on the same line:
+```
+while(true){
+  doSomething();
+}
+```
+User Created Names use camelCase:
+```
+int thisIsHowYouWriteCamelCase = 0;
+```
+Spaces between operators:
+```
+if(x == y){
+  a + b = c;
+}
+
+i = j ? k : l;
+```
+Indents = 4 spaces. Please.
+
+Thats it
