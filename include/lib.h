@@ -1,7 +1,11 @@
 #pragma once
 #include "main.h"
 
-extern enum chassisPIDStates;
+enum chassisPIDStates{
+	NORMAL,
+	PIVOT,
+	DISABLE
+};
 
 extern chassisPIDStates chassisState;
 

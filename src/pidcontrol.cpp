@@ -109,6 +109,6 @@ void PidControl::reset_integral(){
     integral = 0;
 }
 
-PidControl chassisStraight = new PidControl(100, 0, 0, 1000);
+PidControl chassisStraight(100, 0, 0, 1000);
 
-PidControl chassisTurn = new PidControl(100, 0, 0, 1000);
+PidControl chassisTurn(100, 0, 0, 1000);

@@ -47,6 +47,7 @@
 #include "lib.h"
 #include "pidcontrol.h"
 #include "odometry.h"
+#include "point.h"
 //variable definition
 extern double gyroOffset;
 

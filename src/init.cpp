@@ -6,13 +6,6 @@
  * All other competition modes are blocked by initialize; it is recommended
  * to keep execution time for this mode under a few seconds.
  */
-
-enum chassisPIDStates{
-	NORMAL,
-	PIVOT,
-	DISABLE
-};
-
 chassisPIDStates chassisState = DISABLE;
 
 void drive_PID() {
@@ -26,8 +19,8 @@ void drive_PID() {
 			chassisPWM(chassisStraight.getOutput(), chassisStraight.getOutput());
 		}
 		else if(chassisState == PIVOT){
-			chassisTurn.setInput(imu.get_rotation()-gyroOffset)
-      chassisTurn.moveTo();
+			chassisTurn.setInput(imu.get_rotation()-gyroOffset);
+      		chassisTurn.moveTo();
 
       chassisPWM(chassisTurn.getOutput(), -chassisTurn.getOutput());
 		}

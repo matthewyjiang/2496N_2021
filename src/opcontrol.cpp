@@ -1,8 +1,8 @@
 #include "main.h"
 
 void tankControl(int maxOutput){
-    int leftY = master.get_analog(pros::ANALOG_LEFT_Y);
-    int rightY = master.get_analog(pros::ANALOG_RIGHT_Y);
+    int leftY = master.get_analog(ANALOG_LEFT_Y);
+    int rightY = master.get_analog(ANALOG_RIGHT_Y);
 
     leftY = std::clamp(leftY, -maxOutput, maxOutput);
     rightY = std::clamp(rightY, -maxOutput, maxOutput);
@@ -62,8 +62,8 @@ void opcontrol() {
 	while (true) {
 
 		tankControl(127);
-    intakeControl(127);
-    despositControl(127);
+        intakeControl(127);
+        despositControl(127, 127);
 
 
 		pros::delay(20);
