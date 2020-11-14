@@ -30,11 +30,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/point.cpp.o",
-            "src\\point.cpp"
+            "bin/movementlib.cpp.o",
+            "src\\movementlib.cpp"
         ],
         "directory": "C:\\Users\\mjimc\\2496N_2021",
-        "file": "src\\point.cpp"
+        "file": "src\\movementlib.cpp"
     },
     {
         "arguments": [
@@ -104,48 +104,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/lib.cpp.o",
-            "src\\lib.cpp"
+            "bin/opcontrol.cpp.o",
+            "src\\opcontrol.cpp"
         ],
         "directory": "C:\\Users\\mjimc\\2496N_2021",
-        "file": "src\\lib.cpp"
-    },
-    {
-        "arguments": [
-            "clang++",
-            "-c",
-            "-target",
-            "armv7ar-none-none-eabi",
-            "-fno-ms-extensions",
-            "-fno-ms-compatibility",
-            "-fno-delayed-template-parsing",
-            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
-            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
-            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
-            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
-            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
-            "-iquote./include",
-            "-iquote./include/./",
-            "-mcpu=cortex-a9",
-            "-mfpu=neon-fp16",
-            "-mfloat-abi=softfp",
-            "-Os",
-            "-g",
-            "-D_POSIX_THREADS",
-            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
-            "-Wno-psabi",
-            "-ffunction-sections",
-            "-fdata-sections",
-            "-fdiagnostics-color",
-            "-funwind-tables",
-            "--std=gnu++17",
-            "-o",
-            "bin/pidcontrol.cpp.o",
-            "src\\pidcontrol.cpp"
-        ],
-        "directory": "C:\\Users\\mjimc\\2496N_2021",
-        "file": "src\\pidcontrol.cpp"
+        "file": "src\\opcontrol.cpp"
     },
     {
         "arguments": [
@@ -215,11 +178,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/opcontrol.cpp.o",
-            "src\\opcontrol.cpp"
+            "bin/odometry.cpp.o",
+            "src\\odometry.cpp"
         ],
         "directory": "C:\\Users\\mjimc\\2496N_2021",
-        "file": "src\\opcontrol.cpp"
+        "file": "src\\odometry.cpp"
     },
     {
         "arguments": [
@@ -257,6 +220,117 @@
         ],
         "directory": "C:\\Users\\mjimc\\2496N_2021",
         "file": "src\\main.cpp"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-target",
+            "armv7ar-none-none-eabi",
+            "-fno-ms-extensions",
+            "-fno-ms-compatibility",
+            "-fno-delayed-template-parsing",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
+            "-iquote./include",
+            "-iquote./include/./",
+            "-mcpu=cortex-a9",
+            "-mfpu=neon-fp16",
+            "-mfloat-abi=softfp",
+            "-Os",
+            "-g",
+            "-D_POSIX_THREADS",
+            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
+            "-Wno-psabi",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fdiagnostics-color",
+            "-funwind-tables",
+            "--std=gnu++17",
+            "-o",
+            "bin/lib.cpp.o",
+            "src\\lib.cpp"
+        ],
+        "directory": "C:\\Users\\mjimc\\2496N_2021",
+        "file": "src\\lib.cpp"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-target",
+            "armv7ar-none-none-eabi",
+            "-fno-ms-extensions",
+            "-fno-ms-compatibility",
+            "-fno-delayed-template-parsing",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
+            "-iquote./include",
+            "-iquote./include/./",
+            "-mcpu=cortex-a9",
+            "-mfpu=neon-fp16",
+            "-mfloat-abi=softfp",
+            "-Os",
+            "-g",
+            "-D_POSIX_THREADS",
+            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
+            "-Wno-psabi",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fdiagnostics-color",
+            "-funwind-tables",
+            "--std=gnu++17",
+            "-o",
+            "bin/point.cpp.o",
+            "src\\point.cpp"
+        ],
+        "directory": "C:\\Users\\mjimc\\2496N_2021",
+        "file": "src\\point.cpp"
+    },
+    {
+        "arguments": [
+            "clang++",
+            "-c",
+            "-target",
+            "armv7ar-none-none-eabi",
+            "-fno-ms-extensions",
+            "-fno-ms-compatibility",
+            "-fno-delayed-template-parsing",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
+            "-isystemc:\\users\\mjimc\\appdata\\local\\programs\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
+            "-iquote./include",
+            "-iquote./include/./",
+            "-mcpu=cortex-a9",
+            "-mfpu=neon-fp16",
+            "-mfloat-abi=softfp",
+            "-Os",
+            "-g",
+            "-D_POSIX_THREADS",
+            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
+            "-Wno-psabi",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fdiagnostics-color",
+            "-funwind-tables",
+            "--std=gnu++17",
+            "-o",
+            "bin/pidcontrol.cpp.o",
+            "src\\pidcontrol.cpp"
+        ],
+        "directory": "C:\\Users\\mjimc\\2496N_2021",
+        "file": "src\\pidcontrol.cpp"
     },
     {
         "arguments": [
