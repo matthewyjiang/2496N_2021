@@ -14,33 +14,13 @@ void tankControl(int maxOutput){
 }
 
 void intakeControl(int speed){
-    if (master.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
-        left_roller_mtr.move(speed);
-        right_roller_mtr.move(speed);
-    }
-    else if(master.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
-        left_roller_mtr.move(-speed);
-        right_roller_mtr.move(-speed);
-    }
-    else {
-        left_roller_mtr.move(0);
-        right_roller_mtr.move(0);
-    }
+    left_roller_mtr.move(speed);
+    right_roller_mtr.move(speed);
 }
 
-void despositControl(int depositspeed, int indexspeed){
-    if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L1)){
-        depositor_mtr.move(depositspeed);
-        indexer_mtr.move(indexspeed);
-    }
-    else if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L2)){
-        depositor_mtr.move(-depositspeed);
-        indexer_mtr.move(-indexspeed);
-    }
-    else{
-        depositor_mtr.move(0);
-        indexer_mtr.move(0);
-    }
+void depositControl(int speed){
+    depositor_mtr.move(speed);
+    indexer_mtr.move(speed);
 }
 
 
@@ -60,12 +40,49 @@ void despositControl(int depositspeed, int indexspeed){
 
 void opcontrol() {
 
+    bool btnR1;
+    bool btnR2;
+    bool btnL1;
+    bool btnL2;
+    bool btnLeft;
+    bool slowOuttake;
+
 	while (true) {
 
-		tankControl(127);
-        intakeControl(127);
-        despositControl(127, 127);
+        btnR1 = master.get_digital(pros::E_CONTROLLER_DIGITAL_R1);
+        btnR2 = master.get_digital(pros::E_CONTROLLER_DIGITAL_R2);
+        btnL1 = master.get_digital(pros::E_CONTROLLER_DIGITAL_L1);
+        btnL2 = master.get_digital(pros::E_CONTROLLER_DIGITAL_L2);
+        btnLeft = master.get_digital(pros::E_CONTROLLER_DIGITAL_LEFT);
 
+		tankControl(127);
+
+        if(master.get_digital(pros::E_CONTROLLER_DIGITAL_A)){
+            slowOuttake = true;
+            btnR1 = true;
+        } else {
+            slowOuttake = false;
+        }
+        
+        if(btnR1){
+            intakeControl(127);
+        } else if(btnR2){
+            intakeControl(-127);
+        } else {
+            intakeControl(0);
+        }
+
+        if(btnL1){
+            depositControl(127);
+        } else if(btnL2){
+            depositControl(-70);
+        } else if(slowOuttake){
+            depositControl(-33);
+        } else if(btnLeft){
+            depositControl(70);
+        } else {
+            depositControl(0);
+        }
 
 		pros::delay(20);
 	}

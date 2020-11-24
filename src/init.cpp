@@ -31,5 +31,9 @@ void drive_PID() {
 void initialize() {
 	chassisStraight.slewRate = 300;
 	chassisTurn.slewRate = 300;
+	front_left_mtr.set_current_limit(2200);
+    back_left_mtr.set_current_limit(2200);
+    front_right_mtr.set_current_limit(2200);
+    back_right_mtr.set_current_limit(2200);
 	pros::Task drivePID(drive_PID, "drivepid");
 }

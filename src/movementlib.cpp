@@ -1,5 +1,10 @@
 #include "main.h"
 
+enum turnDirection {
+    LEFT = 1,
+    RIGHT = -1
+};
+
 void stopDrive() {
   chassisPWM(0);
   chassisStraight.reset_variables();
@@ -39,14 +44,14 @@ void drive(int distance, double maxVoltage, int timer){//count in milliseconds, 
   disableChassisPID();
 }
 
-void pivot(int degree, double maxVoltage){
+void pivot(int degree, turnDirection direction, double maxVoltage){
   chassisState = PIVOT;
   chassisTurn.setMaxVoltage(maxVoltage);
-  chassisTurn.setTarget(degree);
+  chassisTurn.setTarget(direction*degree);
 }
 
-void pivot(int degree, double maxVoltage, bool blocking, int threshold){
-  pivot(degree, maxVoltage);
+void pivot(int degree, turnDirection direction, double maxVoltage, bool blocking, int threshold){
+  pivot(degree, direction, maxVoltage);
   pros::delay(50);
   if(blocking){
     while(abs(chassisTurn.getError()) > threshold){
@@ -57,8 +62,8 @@ void pivot(int degree, double maxVoltage, bool blocking, int threshold){
   }
 }
 
-void pivot(int degree, double maxVoltage, int timer){//count in milliseconds, blocking by default
-  pivot(degree, maxVoltage);
+void pivot(int degree, turnDirection direction, double maxVoltage, int timer){//count in milliseconds, blocking by default
+  pivot(degree, direction, maxVoltage);
   int count = 0;
   while(count <= timer){
     count+=10;
@@ -66,6 +71,14 @@ void pivot(int degree, double maxVoltage, int timer){//count in milliseconds, bl
   }
   stopDrive();
   disableChassisPID();
+}
+
+void arcturn(int degrees, int radius, double maxVoltage){
+  const double trackWidth = 484.65;
+  const double ratio = (radius+trackWidth/2)/(radius-trackWidth/2);
+
+
+
 }
 
 // count is easier for programming autons fast, because it allows the PID to settle every time.

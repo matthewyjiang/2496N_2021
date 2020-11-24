@@ -1,6 +1,8 @@
 #pragma once
 #include "main.h"
 
+extern enum turnDirection;
+
 extern void disableChassisPID();
 
 extern void drive(int distance, double maxVoltage);
