@@ -10,6 +10,11 @@ class Point {
     Point();
     Point(double x, double y);
 
+    double getX();
+    double getY();
+
     double getDistance(Point p);
+
+    std::string writeCoordinates();
 
 };

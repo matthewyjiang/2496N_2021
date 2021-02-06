@@ -2,6 +2,4 @@
 
 #include "main.h"
 
-extern void cwAuton(void);
-
-extern void ccwAuton(void);
+extern void auton(void);

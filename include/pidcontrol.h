@@ -63,3 +63,4 @@ class PidControl{
 
 extern PidControl chassisStraight;
 extern PidControl chassisTurn;
+extern PidControl chassisAngle;
