@@ -10,4 +10,6 @@ void auton(){
     depositControl(0);
 
     drive(5000, 8000, 1000);
+    pivot(180,  8000, 1000);
+    drive(5000, 8000, 1000);
 }
