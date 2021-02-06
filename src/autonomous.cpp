@@ -1,12 +1,14 @@
-#include "autonomous.h"
+#include "main.h"
 
 //this is where the auton be
 
-void cwAuton(){
-    
-    
-}
+void auton(){
+    intakeControl(-127);
+    depositControl(-127);
+    pros::delay(500); 
+    intakeControl(127);
+    depositControl(0);
 
-void ccwAuton(){
+    drive(5000, 8000, 1000);
 
 }

@@ -14,4 +14,4 @@ pros::Motor depositor_mtr(17, pros::E_MOTOR_GEARSET_06, true);
 pros::ADIEncoder left_encoder(1,2);
 pros::ADIEncoder right_encoder(3,4);
 
-pros::Imu imu(20);
+pros::Imu imu(11);

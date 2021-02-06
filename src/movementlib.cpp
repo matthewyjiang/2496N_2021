@@ -18,6 +18,7 @@ void disableChassisPID(){
 void drive(int distance, double maxVoltage){
   chassisState = NORMAL;
   chassisStraight.setTarget(distance);
+  chassisAngle.setTarget(imu.get_rotation());
   chassisStraight.setMaxVoltage(maxVoltage);
 }
 
