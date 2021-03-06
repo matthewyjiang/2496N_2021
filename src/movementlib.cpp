@@ -1,9 +1,4 @@
-#include "main.h"
-
-enum turnDirection {
-    LEFT = 1,
-    RIGHT = -1
-};
+#include "main.h" 
 
 void stopDrive() {
   chassisPWM(0);
@@ -45,13 +40,13 @@ void drive(int distance, double maxVoltage, int timer){//count in milliseconds, 
   disableChassisPID();
 }
 
-void pivot(int degree, turnDirection direction, double maxVoltage){
+void pivot(int degree, int direction, double maxVoltage){
   chassisState = PIVOT;
   chassisTurn.setMaxVoltage(maxVoltage);
   chassisTurn.setTarget(direction*degree);
 }
 
-void pivot(int degree, turnDirection direction, double maxVoltage, bool blocking, int threshold){
+void pivot(int degree, int direction, double maxVoltage, bool blocking, int threshold){
   pivot(degree, direction, maxVoltage);
   pros::delay(50);
   if(blocking){
@@ -63,7 +58,7 @@ void pivot(int degree, turnDirection direction, double maxVoltage, bool blocking
   }
 }
 
-void pivot(int degree, turnDirection direction, double maxVoltage, int timer){//count in milliseconds, blocking by default
+void pivot(int degree, int direction, double maxVoltage, int timer){//count in milliseconds, blocking by default
   pivot(degree, direction, maxVoltage);
   int count = 0;
   while(count <= timer){
